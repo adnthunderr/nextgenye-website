@@ -1,6 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Toolbar, Typography, Container, Grid, Card, CardContent, CardMedia, Button, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Container, Card, CardContent, CardMedia, Button, Box } from '@mui/material';
 
 const theme = createTheme();
 
@@ -28,62 +28,56 @@ function App() {
             A non-profit organization in Washington State dedicated to youth development.
           </Typography>
         </Box>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Card className="h-full">
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://via.placeholder.com/300x140?text=Sports"
-                alt="Sports"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Sports Programs
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Encouraging physical activity and teamwork through various sports activities for youth.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Card className="h-full">
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://via.placeholder.com/300x140?text=Education"
-                alt="Education"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Education Initiatives
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Providing educational resources and support to help youth succeed academically.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Card className="h-full">
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://via.placeholder.com/300x140?text=Robotics"
-                alt="Robotics"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Robotics Camps
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Hands-on robotics educational camps to inspire innovation and STEM skills.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+        <Box className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card className="h-full">
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/300x140?text=Sports"
+              alt="Sports"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Sports Programs
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Encouraging physical activity and teamwork through various sports activities for youth.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className="h-full">
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/300x140?text=Education"
+              alt="Education"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Education Initiatives
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Providing educational resources and support to help youth succeed academically.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className="h-full">
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://via.placeholder.com/300x140?text=Robotics"
+              alt="Robotics"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Robotics Camps
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Hands-on robotics educational camps to inspire innovation and STEM skills.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
         <Box className="mt-8 text-center">
           <Typography variant="h4" className="mb-4">
             Get Involved

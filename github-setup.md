@@ -97,7 +97,50 @@ This repository (`nextgenye-website`) is currently configured to use the `github
 
 - Remote origin: `git@github-aryan:adnthunderr/nextgenye-website.git`
 
-## Troubleshooting
+## Restricting Commits to Specific Users
+
+To ensure only authorized users can commit to this repository, set up branch protection rules on GitHub. This is especially important for maintaining code quality and security.
+
+### Steps to Restrict Pushes:
+
+1. Go to your repository on GitHub: https://github.com/adnthunderr/nextgenye-website
+
+2. Click on **Settings** tab
+
+3. In the left sidebar, click **Branches**
+
+4. Under "Branch protection rules", click **Add rule**
+
+5. Configure the rule:
+   - **Branch name pattern**: `main` (or your default branch)
+   - Check **Require pull request reviews before merging**
+   - Check **Require status checks to pass before merging** (if you have CI/CD)
+   - Check **Require branches to be up to date before merging**
+   - Check **Restrict who can push to matching branches**
+     - In the "Allowed to push" section, add only `adnthunderr`
+   - Check **Include administrators** (uncheck if you want to restrict even the owner, but typically leave checked for owners)
+
+6. Click **Create** to save the rule
+
+### Additional Security Measures:
+
+- Enable **Require signed commits** if your team uses GPG keys
+- Set up **Code owners** file to require reviews from specific users for certain files
+- Use GitHub Actions for automated checks
+
+### Switching Accounts for This Repository:
+
+If you need to change which SSH account this repository uses:
+
+```bash
+# To switch to a different account (e.g., default github.com)
+git remote set-url origin git@github.com:adnthunderr/nextgenye-website.git
+
+# Or to another configured host
+git remote set-url origin git@github-other:adnthunderr/nextgenye-website.git
+```
+
+Make sure the SSH key for the chosen account is properly configured and added to the corresponding GitHub account.
 
 - If you get "Permission denied", ensure the correct SSH key is added to the GitHub account
 - If keys aren't persisting, add `ssh-add` commands to your PowerShell profile

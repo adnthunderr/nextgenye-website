@@ -49,6 +49,24 @@ A React-based website for NextGen Youth Empowerment, a non-profit organization i
 npm run build
 ```
 
+## Deploy to GitHub Pages
+
+This project is configured to deploy automatically with GitHub Actions.
+
+1. Ensure `vite.config.ts` uses the correct base path:
+   ```ts
+   base: "/nextgenye-website/",
+   ```
+
+2. Push to the `main` branch. The workflow at `.github/workflows/deploy.yml` will build and deploy.
+
+3. In GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+
+4. Visit the published site:
+   ```
+   https://<your-username>.github.io/nextgenye-website/
+   ```
+
 ## Technologies Used
 
 - **React**: Frontend framework

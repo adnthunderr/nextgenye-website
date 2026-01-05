@@ -12,11 +12,9 @@ A React-based website for NextGen Youth Empowerment, a non-profit organization i
 ## Organization Details
 
 - **Name**: NextGen Youth Empowerment
-- **EIN**: 99-0763282
 - **Focus Areas**:
   - Sports programs for youth development
-  - Educational initiatives
-  - Robotics educational camps
+  - STEM education Volunteer lead Programs
 
 ## Getting Started
 

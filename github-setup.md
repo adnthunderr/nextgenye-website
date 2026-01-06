@@ -151,3 +151,7 @@ Make sure the SSH key for the chosen account is properly configured and added to
 - The `Host` in `.ssh/config` is an alias you create
 - Use this alias in your git remote URLs instead of `github.com`
 - Each repository can use a different account by setting the appropriate remote URL
+
+## Steps to Clone Repo using Specific Account
+- Copy the repo SSH URL and replace github.com with github-aryan (configured for Aryan) or github-work (configured for Work)
+- git clone git@github-aryan:adnthunderr/cricket-vision.git
